@@ -15,7 +15,7 @@ interface StudioState {
 
 export const useStudioStore = defineStore('studio', {
   state: (): StudioState => ({
-    activeTool: 'select',
+    activeTool: 'hand',
     selectedIds: [],
     clipboard: [],
     history: [],

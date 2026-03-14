@@ -17,7 +17,6 @@
       <ProjectOverlay />
       <StudioToolbar />
       <ViewportControls />
-      <PagesPanel />
     </template>
   </div>
 </template>
@@ -35,7 +34,6 @@ import Navigation from '~/components/shell/Navigation.vue'
 import ProjectOverlay from '~/components/overlays/ProjectOverlay.vue'
 import StudioToolbar from '~/components/shell/StudioToolbar.vue'
 import ViewportControls from '~/components/shell/ViewportControls.vue'
-import PagesPanel from '~/components/shell/PagesPanel.vue'
 
 const sceneStore = useSceneStore()
 const studioStore = useStudioStore()
@@ -72,7 +70,8 @@ onMounted(() => {
 const { registerHandler } = useKeyboard()
 
 registerHandler('v', () => studioStore.setActiveTool('select'))
-registerHandler('escape', () => studioStore.setActiveTool('select'))
+registerHandler('h', () => studioStore.setActiveTool('hand'))
+registerHandler('escape', () => studioStore.setActiveTool('hand'))
 registerHandler('f', () => studioStore.setActiveTool('frame'))
 registerHandler('t', () => studioStore.setActiveTool('text'))
 registerHandler('s', (e) => { if (!e.metaKey && !e.ctrlKey) studioStore.setActiveTool('shape') })

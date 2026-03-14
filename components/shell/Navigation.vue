@@ -2,10 +2,10 @@
   <nav class="navigation">
     <!-- Logo -->
     <button class="logo" @click="handleHomeClick">
-      {{ sceneStore.scene?.title || 'Portfolio' }}
+      Siméon Artamonov
     </button>
 
-    <!-- Desktop Nav Links — derived from frames with showInNav -->
+    <!-- Desktop Nav Links — Work and Contact only -->
     <div class="nav-links">
       <button
         v-for="frame in navFrames"
@@ -54,7 +54,10 @@ const sceneStore = useSceneStore()
 const viewportStore = useViewportStore()
 const appStore = useAppStore()
 
-const navFrames = computed(() => sceneStore.navFrames)
+const NAV_SLUGS = ['work', 'contact']
+const navFrames = computed(() =>
+  sceneStore.scene?.frames.filter(f => NAV_SLUGS.includes(f.slug)) || [],
+)
 
 const handleNavClick = (frameId: string) => {
   viewportStore.focusOnFrame(frameId)

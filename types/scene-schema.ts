@@ -150,7 +150,7 @@ export interface ViewportState {
 }
 
 // Editor/Studio types
-export type StudioTool = 'select' | 'frame' | 'shape' | 'text' | 'image' | 'component'
+export type StudioTool = 'select' | 'hand' | 'frame' | 'shape' | 'text' | 'image' | 'component'
 
 // Validation functions
 export function validateScene(data: unknown): SceneDocument {

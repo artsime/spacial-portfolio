@@ -133,9 +133,12 @@ const layerConfig = computed(() => ({
 const containerStyle = computed(() => {
   const tool = studioStore.activeTool
   const crosshairTools: typeof tool[] = ['frame', 'shape', 'text', 'image', 'component']
+  let cursor = 'default'
+  if (crosshairTools.includes(tool)) cursor = 'crosshair'
+  else if (tool === 'hand') cursor = isPanning.value ? 'grabbing' : 'grab'
   return {
     backgroundColor: scene.value?.world.background.color || '#f8f7f4',
-    cursor: crosshairTools.includes(tool) ? 'crosshair' : (isPanning.value ? 'grabbing' : 'default'),
+    cursor,
   }
 })
 
@@ -207,8 +210,7 @@ const handleMouseDown = (e: any) => {
 
   const tool = studioStore.activeTool
 
-  if (tool === 'select') {
-    // Only pan when clicking on background (modules/frames stop their own mousedown bubbling)
+  if (tool === 'hand') {
     isPanning.value = true
     lastX.value = pos.x
     lastY.value = pos.y

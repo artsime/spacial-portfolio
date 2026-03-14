@@ -52,16 +52,12 @@
     </button>
   </div>
 
-  <!-- Status Bar -->
-  <div class="status-bar">
-    <span v-if="studioStore.isDirty" class="dirty-indicator">●</span>
-    {{ activeToolLabel }}
-  </div>
 </template>
 
 <script setup lang="ts">
 import {
   MousePointer2,
+  Hand,
   LayoutTemplate,
   Type,
   Square,
@@ -79,6 +75,7 @@ import type { StudioTool } from '~/types/scene-schema'
 const studioStore = useStudioStore()
 
 const tools: { id: StudioTool; icon: any; label: string; key: string }[] = [
+  { id: 'hand',      icon: Hand,           label: 'Hand',      key: 'h' },
   { id: 'select',    icon: MousePointer2,  label: 'Select',    key: 'v' },
   { id: 'frame',     icon: LayoutTemplate, label: 'Frame',     key: 'f' },
   { id: 'text',      icon: Type,           label: 'Text',      key: 't' },
@@ -87,10 +84,6 @@ const tools: { id: StudioTool; icon: any; label: string; key: string }[] = [
   { id: 'component', icon: Puzzle,         label: 'Component', key: 'c' },
 ]
 
-const activeToolLabel = computed(() => {
-  const tool = tools.find(t => t.id === studioStore.activeTool)
-  return tool ? tool.label : 'Select'
-})
 </script>
 
 <style scoped lang="scss">

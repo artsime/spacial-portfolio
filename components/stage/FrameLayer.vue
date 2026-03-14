@@ -8,7 +8,7 @@
         y: frame.y,
         draggable: studioStore.activeTool === 'select',
       }"
-      @mousedown="(e: any) => e.cancelBubble = true"
+      @mousedown="(e: any) => { if (studioStore.activeTool === 'select') e.cancelBubble = true }"
       @click="(e: any) => handleFrameClick(frame, e)"
       @tap="(e: any) => handleFrameClick(frame, e)"
       @dragstart="() => handleFrameDragStart(frame)"
@@ -101,6 +101,7 @@ const getThemeColors = (frame: FrameNode) => {
 }
 
 const handleFrameClick = (frame: FrameNode, e: any) => {
+  if (studioStore.activeTool !== 'select') return
   e.cancelBubble = true
   sceneStore.setCurrentFrame(frame.id)
   studioStore.select(frame.id, e.evt?.shiftKey)
