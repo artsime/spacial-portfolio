@@ -1,0 +1,46 @@
+export default defineNuxtConfig({
+  devtools: { enabled: true },
+  modules: [
+    '@pinia/nuxt',
+  ],
+  plugins: [
+    '~/plugins/vue-konva.client.ts',
+  ],
+  css: ['~/assets/styles/main.scss'],
+  components: [
+    {
+      path: '~/components',
+      pathPrefix: false,
+    },
+  ],
+  pinia: {
+    storesDirs: ['./stores/**'],
+  },
+  routeRules: {
+    '/studio/**': { ssr: false },
+    '/world': { ssr: false },
+  },
+  nitro: {
+    preset: 'static',
+  },
+  vite: {
+    optimizeDeps: {
+      include: ['konva', 'vue-konva'],
+    },
+  },
+  app: {
+    head: {
+      title: 'Spatial Portfolio',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        { name: 'description', content: 'A spatial, navigable portfolio experience' },
+      ],
+      link: [
+        { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
+        { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin: '' },
+        { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap' },
+      ],
+    },
+  },
+})

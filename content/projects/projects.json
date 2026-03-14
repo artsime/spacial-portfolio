@@ -1,0 +1,97 @@
+[
+  {
+    "id": "proj-1",
+    "slug": "brand-identity-system",
+    "title": "Brand Identity System",
+    "role": "Lead Designer",
+    "date": "2024",
+    "summary": "A comprehensive brand identity system for a fintech startup.",
+    "description": "Developed a complete visual identity including logo, color system, typography, and brand guidelines. The project spanned 6 months and involved extensive research, stakeholder interviews, and iterative design processes.",
+    "images": [
+      "https://images.unsplash.com/photo-1634942537034-2531766767d1?w=800",
+      "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800",
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?w=800"
+    ],
+    "externalLink": "https://example.com",
+    "tags": ["Branding", "Identity", "Design System"],
+    "featured": true
+  },
+  {
+    "id": "proj-2",
+    "slug": "digital-experience-platform",
+    "title": "Digital Experience Platform",
+    "role": "UX Director",
+    "date": "2023",
+    "summary": "Redesigning the core user experience for a SaaS platform.",
+    "description": "Led the UX redesign of a complex B2B platform, improving user satisfaction by 40% and reducing support tickets by 25%. Conducted user research, created wireframes, and built a scalable design system.",
+    "images": [
+      "https://images.unsplash.com/photo-1551650975-87deedd944c3?w=800",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+    ],
+    "tags": ["UX Design", "Product Design", "SaaS"],
+    "featured": true
+  },
+  {
+    "id": "proj-3",
+    "slug": "immersive-web-experience",
+    "title": "Immersive Web Experience",
+    "role": "Creative Developer",
+    "date": "2024",
+    "summary": "An award-winning interactive web experience.",
+    "description": "Built a cutting-edge web experience using WebGL, GSAP, and modern frontend technologies. The site won multiple awards and received over 1 million visits in its first month.",
+    "images": [
+      "https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=800",
+      "https://images.unsplash.com/photo-1558655146-d09347e92766?w=800",
+      "https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=800"
+    ],
+    "externalLink": "https://example.com",
+    "tags": ["WebGL", "Creative Dev", "Animation"],
+    "featured": true
+  },
+  {
+    "id": "proj-4",
+    "slug": "mobile-app-redesign",
+    "title": "Mobile App Redesign",
+    "role": "Product Designer",
+    "date": "2023",
+    "summary": "Complete overhaul of a fitness tracking application.",
+    "description": "Redesigned a popular fitness app with over 5 million users. Focused on simplifying the user journey, improving accessibility, and creating a more engaging visual design.",
+    "images": [
+      "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800",
+      "https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?w=800"
+    ],
+    "tags": ["Mobile", "App Design", "UX"],
+    "featured": false
+  },
+  {
+    "id": "proj-5",
+    "slug": "ecommerce-experience",
+    "title": "E-commerce Experience",
+    "role": "Design Lead",
+    "date": "2024",
+    "summary": "Premium shopping experience for luxury fashion brand.",
+    "description": "Created an elegant e-commerce experience that reflects the brand's luxury positioning. Implemented advanced filtering, personalized recommendations, and a seamless checkout flow.",
+    "images": [
+      "https://images.unsplash.com/photo-1441986300917-64674bd600d8?w=800",
+      "https://images.unsplash.com/photo-1467043237213-65f2da53396f?w=800"
+    ],
+    "externalLink": "https://example.com",
+    "tags": ["E-commerce", "Fashion", "UX"],
+    "featured": true
+  },
+  {
+    "id": "proj-6",
+    "slug": "data-visualization-dashboard",
+    "title": "Data Visualization Dashboard",
+    "role": "UI/UX Designer",
+    "date": "2023",
+    "summary": "Analytics dashboard for enterprise clients.",
+    "description": "Designed a comprehensive analytics dashboard that transforms complex data into actionable insights. Created custom visualization components and an intuitive filtering system.",
+    "images": [
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=800",
+      "https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800"
+    ],
+    "tags": ["Dashboard", "Data Viz", "Enterprise"],
+    "featured": false
+  }
+]
